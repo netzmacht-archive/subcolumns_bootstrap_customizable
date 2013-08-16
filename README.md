@@ -8,6 +8,7 @@ Requirements
 
 * Contao 3.0.6
 * subcolumns 2.1.0 rc1
+* Bootstrap 3 RC2
 
 Installation
 -------------
