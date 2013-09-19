@@ -219,8 +219,8 @@ $colSetTemplate = array
 				'label' => $GLOBALS['TL_LANG']['tl_columnset']['order'],
 				'inputType' => 'select',
 				'options' => array(
-					'push' => array('push-1', 'push-2', 'push-3', 'push-4', 'push-5', 'push-6', 'push-7', 'push-8', 'push-9', 'push-10', 'push-11', 'push-12'),
-					'pull' => array('pull-1', 'pull-2', 'pull-3', 'pull-4', 'pull-5', 'pull-6', 'pull-7', 'pull-8', 'pull-9', 'pull-10', 'pull-11', 'pull-12'),
+					'push' => array('push-0', 'push-1', 'push-2', 'push-3', 'push-4', 'push-5', 'push-6', 'push-7', 'push-8', 'push-9', 'push-10', 'push-11', 'push-12'),
+					'pull' => array('pull-0', 'pull-1', 'pull-2', 'pull-3', 'pull-4', 'pull-5', 'pull-6', 'pull-7', 'pull-8', 'pull-9', 'pull-10', 'pull-11', 'pull-12'),
 				),
 				'eval' => array('style' => 'width: 160px;', 'includeBlankOption' => true),
 			),
@@ -230,9 +230,12 @@ $colSetTemplate = array
 	'sql'                     => "blob NULL"
 );
 
+$colSetXsTemplate = $colSetTemplate;
+unset($colSetXsTemplate['eval']['columnFields']['order']);
+
 $GLOBALS['TL_DCA']['tl_columnset']['fields']['columnset_xs'] = array_merge
 (
-	$colSetTemplate, array('label' => &$GLOBALS['TL_LANG']['tl_columnset']['columnset_xs'])
+	$colSetXsTemplate, array('label' => &$GLOBALS['TL_LANG']['tl_columnset']['columnset_xs'])
 );
 
 $GLOBALS['TL_DCA']['tl_columnset']['fields']['columnset_sm'] = array_merge
