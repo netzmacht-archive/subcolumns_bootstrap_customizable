@@ -33,7 +33,7 @@
     "extra":{
         "contao": {
             "symlinks":{
-                "src/system/modules/subcolumns_bootstrap_customize": "system/modules/subcolumns_bootstrap_customize"
+                "src/system/modules/subcolumns_bootstrap_customizable": "system/modules/subcolumns_bootstrap_customizable"
             }
         }
     }
