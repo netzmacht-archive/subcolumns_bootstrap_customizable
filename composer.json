@@ -1,0 +1,40 @@
+{
+    "name":"netzmacht/contao-iconwizard",
+    "description":"Provides an backend widget for choosing icons of an icon font",
+    "keywords":["icons", "widget", "wizard", "contao", "dca"],
+    "type":"contao-module",
+    "homepage":"http://netzmacht.de/erweiterungen/frontend/spaltenseteditor/",
+    "license":"LGPL-3.0+",
+    "authors":[
+        {
+            "name":"David Molineus",
+            "email":"mail@netzmacht.de",
+            "homepage":"http://www.netzmacht.de",
+            "role":"Project leader"
+        }
+    ],
+    "support":{
+        "email":"mail@netzmacht.de",
+        "issues":"https://github.com/netzmacht/subcolumns_bootstrap_customizable/issues",
+        "wiki": "http://netzmacht.de/erweiterungen/frontend/spaltenseteditor",
+        "source":"https://github.com/netzmacht/subcolumns_bootstrap_customizable"
+    },
+    "require":{
+        "php":">=5.3",
+        "contao/core":"~3.0",
+        "contao-legacy/subcolumns":"~2.1.0"
+    },
+    "autoload":{
+        "classmap":["src/"]
+    },
+    "replace": {
+        "contao-legacy/subcolumns_bootstrap_customize" : "*"
+    },
+    "extra":{
+        "contao": {
+            "symlinks":{
+                "src/system/modules/subcolumns_bootstrap_customize": "system/modules/subcolumns_bootstrap_customize"
+            }
+        }
+    }
+}
