@@ -35,6 +35,9 @@
             "symlinks":{
                 "src/system/modules/subcolumns_bootstrap_customizable": "system/modules/subcolumns_bootstrap_customizable"
             }
+        },
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
         }
     }
 }
