@@ -110,10 +110,27 @@ class ColumnSet extends \Backend
 			return;
 		}
 
-		$model = \ContentModel::findByPK($dc->id);
+		if($dc->table == 'tl_content') {
+			$model = \ContentModel::findByPK($dc->id);
+		}
+		else {
+			$model = \ModuleModel::findByPk($dc->id);
+		}
+
 
 		if($model->sc_type > 0) {
-			\MetaPalettes::appendFields('tl_content', 'colsetStart', 'colset', array('columnset_id'));
+			\MetaPalettes::appendFields($dc->table, 'colsetStart', 'colset', array('columnset_id'));
+		}
+		else {
+			$model = \ModuleModel::findByPk($dc->id);
+
+			if($model->sc_type > 0) {
+				$GLOBALS['TL_DCA']['tl_module']['palettes']['subcolumns'] = str_replace(
+					'sc_type,',
+					'sc_type,columnset_id,',
+					$GLOBALS['TL_DCA']['tl_module']['palettes']['subcolumns']
+				);
+			}
 		}
 	}
 
@@ -220,5 +237,34 @@ class ColumnSet extends \Backend
 		}
 
 		return $set;
+	}
+
+
+	/**
+	 * @param $dc
+	 * @return array
+	 */
+	public function getColumnsForModule($dc)
+	{
+		if($GLOBALS['TL_CONFIG']['subcolumns'] != 'boostrap_customizable') {
+			$sc = new \tl_module_sc();
+			return $sc->getColumns();
+		}
+
+		$model = \ModuleModel::findByPK($dc->currentRecord);
+		$cols  = array();
+
+		$translate = array('first', 'second', 'third', 'fourth', 'fith');
+
+		for($i = 0; $i < $model->sc_type; $i++) {
+			if(!array_key_exists($i, $translate)) {
+				break;
+			}
+
+			$key        = $translate[$i];
+			$cols[$key] = $GLOBALS['TL_LANG']['MSC']['sc_' . $key];
+		}
+
+		return $cols;
 	}
 }
