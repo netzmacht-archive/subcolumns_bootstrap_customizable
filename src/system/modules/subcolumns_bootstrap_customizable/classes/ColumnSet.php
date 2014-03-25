@@ -112,24 +112,22 @@ class ColumnSet extends \Backend
 
 		if($dc->table == 'tl_content') {
 			$model = \ContentModel::findByPK($dc->id);
-		}
-		else {
-			$model = \ModuleModel::findByPk($dc->id);
-		}
 
-
-		if($model->sc_type > 0) {
-			\MetaPalettes::appendFields($dc->table, 'colsetStart', 'colset', array('columnset_id'));
+			if($model->sc_type > 0) {
+				\MetaPalettes::appendFields($dc->table, 'colsetStart', 'colset', array('columnset_id'));
+			}
 		}
 		else {
 			$model = \ModuleModel::findByPk($dc->id);
 
 			if($model->sc_type > 0) {
-				$GLOBALS['TL_DCA']['tl_module']['palettes']['subcolumns'] = str_replace(
-					'sc_type,',
-					'sc_type,columnset_id,',
-					$GLOBALS['TL_DCA']['tl_module']['palettes']['subcolumns']
-				);
+				if($model->sc_type > 0) {
+					$GLOBALS['TL_DCA']['tl_module']['palettes']['subcolumns'] = str_replace(
+						'sc_type,',
+						'sc_type,columnset_id,',
+						$GLOBALS['TL_DCA']['tl_module']['palettes']['subcolumns']
+					);
+				}
 			}
 		}
 	}
