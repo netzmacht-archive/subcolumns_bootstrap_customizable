@@ -12,6 +12,8 @@
  *
  **/
 
+$GLOBALS['TL_HOOKS']['isVisibleElement'][] = array('Netzmacht\ColumnSet\Hooks', 'isVisibleElement');
+
 /**
  * backend modules
  */
@@ -24,9 +26,12 @@ $GLOBALS['BE_MOD']['design']['columnset'] = array(
 /**
  * replace content elements
  */
-$GLOBALS['TL_CTE']['subcolumn']['colsetStart'] = 'Netzmacht\\ColumnSet\\colsetStart';
-$GLOBALS['TL_CTE']['subcolumn']['colsetPart'] = 'Netzmacht\\ColumnSet\\colsetPart';
-
+// using isVisibleElement since Contao 3.2
+if(version_compare(VERSION, '3.2', '<')) {
+	$GLOBALS['TL_CTE']['subcolumn']['colsetStart']  = 'Netzmacht\ColumnSet\colsetStart';
+	$GLOBALS['TL_CTE']['subcolumn']['colsetPart']   = 'Netzmacht\ColumnSet\colsetPart';
+	$GLOBALS['FE_MOD']['application']['subcolumns'] = 'Netzmacht\ColumnSet\ModuleSubcolumns';
+}
 
 /**
  * columset

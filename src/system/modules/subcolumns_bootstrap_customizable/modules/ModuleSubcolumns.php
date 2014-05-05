@@ -3,7 +3,7 @@
 namespace Netzmacht;
 
 
-use Netzmacht\ColumnSet\ColumnSet;
+use Netzmacht\ColumnSet;
 
 class ModuleSubcolumns extends \FelixPfeiffer\Subcolumns
 {

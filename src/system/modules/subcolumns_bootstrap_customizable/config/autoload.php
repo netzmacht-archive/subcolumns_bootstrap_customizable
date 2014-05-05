@@ -34,4 +34,9 @@ ClassLoader::addClasses(array
 	// Elements
 	'Netzmacht\ColumnSet\colsetStart' => 'system/modules/subcolumns_bootstrap_customizable/elements/colsetStart.php',
 	'Netzmacht\ColumnSet\colsetPart'  => 'system/modules/subcolumns_bootstrap_customizable/elements/colsetPart.php',
+
+	// Module
+	'Netzmacht\ColumnSet\ModuleSubcolumns' => 'system/modules/subcolumns_bootstrap_customizable/module/ModuleSubcolumns.php',
 ));
+
+
