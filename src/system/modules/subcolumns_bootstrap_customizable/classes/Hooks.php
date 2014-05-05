@@ -2,8 +2,6 @@
 
 namespace Netzmacht\ColumnSet;
 
-require_once 'GridDefinition.php';
-
 class Hooks
 {
 	protected $name   = 'bootstrap_customizable';
