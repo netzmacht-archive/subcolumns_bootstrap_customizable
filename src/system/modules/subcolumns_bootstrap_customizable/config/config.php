@@ -37,7 +37,7 @@ if(version_compare(VERSION, '3.2', '<')) {
  * columset
  */
 
-$GLOBALS['TL_SUBCL']['boostrap_customizable'] = array
+$GLOBALS['TL_SUBCL']['bootstrap_customizable'] = array
 (
 	'label'		=> 'Bootstrap 3 (customizable)', // Label for the selectmenu
 	'scclass' 	=> 'row', // Class for the wrapping container

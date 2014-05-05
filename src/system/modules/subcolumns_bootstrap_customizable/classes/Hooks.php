@@ -21,8 +21,8 @@ class Hooks
 	public function isVisibleElement(\Model $model, $isVisible)
 	{
 		if($GLOBALS['TL_CONFIG']['subcolumns'] == $this->name &&
-			($model->getTable() == 'tl_module' && $model->type == 'subcolumns' ||
-			$model->getTable() == 'tl_content' && ($model->type == 'colsetStart' || $model->type == 'colsetPart' ))
+			(($model->getTable() == 'tl_module' && $model->type == 'subcolumns') ||
+				$model->getTable() == 'tl_content' && ($model->type == 'colsetStart' || $model->type == 'colsetPart' ))
 		) {
 			if($model->type == 'colsetPart') {
 				$modelClass = get_class($model);

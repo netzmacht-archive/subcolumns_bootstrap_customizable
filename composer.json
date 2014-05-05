@@ -34,7 +34,10 @@
         "contao": {
             "symlinks":{
                 "src/system/modules/subcolumns_bootstrap_customizable": "system/modules/subcolumns_bootstrap_customizable"
-            }
+            },
+            "runonce": [
+                "runonce/runonce.php"
+            ]
         },
         "branch-alias": {
             "dev-master": "1.0.x-dev"
