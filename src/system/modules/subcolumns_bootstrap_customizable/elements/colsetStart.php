@@ -31,7 +31,7 @@ class colsetStart extends \FelixPfeiffer\Subcolumns\colsetStart
 	{
 		parent::compile();
 
-		if($GLOBALS['TL_CONFIG']['subcolumns'] == 'boostrap_customizable')
+		if($GLOBALS['TL_CONFIG']['subcolumns'] == 'bootstrap_customizable')
 		{
 			$container =  ColumnSet::prepareContainer($this->columnset_id);
 

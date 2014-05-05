@@ -29,7 +29,7 @@ class colsetPart extends \FelixPfeiffer\Subcolumns\colsetPart
 	{
 		parent::compile();
 
-		if($GLOBALS['TL_CONFIG']['subcolumns'] == 'boostrap_customizable')
+		if($GLOBALS['TL_CONFIG']['subcolumns'] == 'bootstrap_customizable')
 		{
 			$parent = \ContentModel::findByPk($this->sc_parent);
 			$container =  ColumnSet::prepareContainer($parent->columnset_id);

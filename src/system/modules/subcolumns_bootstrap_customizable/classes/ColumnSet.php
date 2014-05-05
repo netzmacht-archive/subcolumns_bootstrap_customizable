@@ -106,7 +106,7 @@ class ColumnSet extends \Backend
 	 */
 	public function appendColumnsetIdToPalette($dc)
 	{
-		if($GLOBALS['TL_CONFIG']['subcolumns'] != 'boostrap_customizable') {
+		if($GLOBALS['TL_CONFIG']['subcolumns'] != 'bootstrap_customizable') {
 			return;
 		}
 
@@ -199,7 +199,7 @@ class ColumnSet extends \Backend
 	 */
 	public function getAllTypes($dc)
 	{
-		if($GLOBALS['TL_CONFIG']['subcolumns'] != 'boostrap_customizable') {
+		if($GLOBALS['TL_CONFIG']['subcolumns'] != 'bootstrap_customizable') {
 			$sc = new \tl_content_sc();
 			return $sc->getAllTypes();
 		}
@@ -244,7 +244,7 @@ class ColumnSet extends \Backend
 	 */
 	public function getColumnsForModule($dc)
 	{
-		if($GLOBALS['TL_CONFIG']['subcolumns'] != 'boostrap_customizable') {
+		if($GLOBALS['TL_CONFIG']['subcolumns'] != 'bootstrap_customizable') {
 			$sc = new \tl_module_sc();
 			return $sc->getColumns();
 		}
