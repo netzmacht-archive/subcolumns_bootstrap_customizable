@@ -1,13 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: david
- * Date: 05.05.14
- * Time: 12:12
- */
 
 namespace Netzmacht\ColumnSet;
 
+require_once 'GridDefinition.php';
 
 class Hooks
 {
@@ -28,10 +23,10 @@ class Hooks
 				$modelClass = get_class($model);
 				$parent     = $modelClass::findByPk($model->sc_parent);
 
-				$GLOBALS['TL_SUBCL']['bootstrap_customizable'] = ColumnSet::prepareContainer($parent->columnset_id);
+				$GLOBALS['TL_SUBCL']['bootstrap_customizable']['sets'][$parent->sc_type] = ColumnSet::prepareContainer($parent->columnset_id);
 			}
 			else {
-				$GLOBALS['TL_SUBCL']['bootstrap_customizable'] = ColumnSet::prepareContainer($model->columnset_id);
+				$GLOBALS['TL_SUBCL']['bootstrap_customizable']['sets'][$model->sc_type] = ColumnSet::prepareContainer($model->columnset_id);
 			}
 		}
 
