@@ -30,6 +30,7 @@ ClassLoader::addClasses(array
 
 	// Classes
 	'Netzmacht\ColumnSet\ColumnSet'   => 'system/modules/subcolumns_bootstrap_customizable/classes/ColumnSet.php',
+	'Netzmacht\ColumnSet\Hooks'   => 'system/modules/subcolumns_bootstrap_customizable/classes/Hooks.php',
 
 	// Elements
 	'Netzmacht\ColumnSet\colsetStart' => 'system/modules/subcolumns_bootstrap_customizable/elements/colsetStart.php',
