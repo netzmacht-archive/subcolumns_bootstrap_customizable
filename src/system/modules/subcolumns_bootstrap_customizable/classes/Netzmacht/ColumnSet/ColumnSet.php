@@ -43,7 +43,7 @@ class ColumnSet extends \Backend
 			return static::$container[$id];
 		}
 
-		$model = \ColumnsetModel::findByPk($id);
+		$model = ColumnsetModel::findByPk($id);
 
 		if($model === null)
 		{
