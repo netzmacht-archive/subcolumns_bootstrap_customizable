@@ -12,6 +12,8 @@
  *
  **/
 
+$GLOBALS['TL_MODELS']['tl_columnset'] = 'Netzmacht\ColumnSet\ColumnsetModel';
+
 $GLOBALS['TL_HOOKS']['isVisibleElement'][] = array('Netzmacht\ColumnSet\Hooks', 'isVisibleElement');
 
 /**

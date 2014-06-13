@@ -11,7 +11,7 @@
  *
  **/
 
-namespace Contao;
+namespace Netzmacht\ColumnSet;
 
 
 /**
