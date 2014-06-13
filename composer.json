@@ -22,7 +22,7 @@
     "require":{
         "php":">=5.3",
         "contao/core":"~3.0",
-        "contao-legacy/subcolumns":"~2.1.0"
+        "felixpfeiffer/subcolumns":"~3.1."
     },
     "autoload":{
         "classmap":["src/"]
