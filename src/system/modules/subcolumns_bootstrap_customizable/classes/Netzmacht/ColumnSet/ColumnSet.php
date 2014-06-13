@@ -139,7 +139,7 @@ class ColumnSet extends \Backend
 	 */
 	public function appendColumnSizesToPalette($dc)
 	{
-		$model = \ColumnsetModel::findByPk($dc->id);
+		$model = ColumnsetModel::findByPk($dc->id);
 		$sizes = array_merge(deserialize($model->sizes, true));
 
 		foreach($sizes as $size)
@@ -224,7 +224,7 @@ class ColumnSet extends \Backend
 	 */
 	public function getAllColumnsets($dc)
 	{
-		$collection = \ColumnsetModel::findBy('published=1 AND columns', $dc->activeRecord->sc_type, array('order' => 'title'));
+		$collection = ColumnsetModel::findBy('published=1 AND columns', $dc->activeRecord->sc_type, array('order' => 'title'));
 		$set = array();
 
 		if($collection !== null)
