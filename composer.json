@@ -22,7 +22,9 @@
     "require":{
         "php":">=5.3",
         "contao/core":"~3.0",
-        "felixpfeiffer/subcolumns":"~3.1."
+        "felixpfeiffer/subcolumns":"~3.1",
+        "menatwork/contao-multicolumnwizard": "~3.2",
+        "bit3/contao-meta-palettes": ">=1.4,<2"
     },
     "autoload":{
         "classmap":["src/"]
