@@ -74,17 +74,17 @@ $GLOBALS['TL_LANG']['tl_columnset']['lg'] = 'Große Auflösung (lg)';
 /**
  * operations
  */
-$GLOBALS['TL_LANG']['tl_columnset']['new'][0] = 'Neues Spatenset';
-$GLOBALS['TL_LANG']['tl_columnset']['new'][1] = 'Neues Spatenset anlegen';
+$GLOBALS['TL_LANG']['tl_columnset']['new'][0] = 'Neues Spaltenset';
+$GLOBALS['TL_LANG']['tl_columnset']['new'][1] = 'Neues Spaltenset anlegen';
 
-$GLOBALS['TL_LANG']['tl_columnset']['edit'][0] = 'Spatenset bearbeiten';
-$GLOBALS['TL_LANG']['tl_columnset']['edit'][1] = 'Spatenset ID %s bearbeiten';
+$GLOBALS['TL_LANG']['tl_columnset']['edit'][0] = 'Spaltenset bearbeiten';
+$GLOBALS['TL_LANG']['tl_columnset']['edit'][1] = 'Spaltenset ID %s bearbeiten';
 
-$GLOBALS['TL_LANG']['tl_columnset']['copy'][0] = 'Spatenset duplizieren';
-$GLOBALS['TL_LANG']['tl_columnset']['copy'][1] = 'Spatenset ID %s duplizieren';
+$GLOBALS['TL_LANG']['tl_columnset']['copy'][0] = 'Spaltenset duplizieren';
+$GLOBALS['TL_LANG']['tl_columnset']['copy'][1] = 'Spaltenset ID %s duplizieren';
 
-$GLOBALS['TL_LANG']['tl_columnset']['delete'][0] = 'Spatenset löschen';
-$GLOBALS['TL_LANG']['tl_columnset']['delete'][1] = 'Spatenset ID %s löschen';
+$GLOBALS['TL_LANG']['tl_columnset']['delete'][0] = 'Spaltenset löschen';
+$GLOBALS['TL_LANG']['tl_columnset']['delete'][1] = 'Spaltenset ID %s löschen';
 
-$GLOBALS['TL_LANG']['tl_columnset']['show'][0] = 'Spatenset anzeigen';
-$GLOBALS['TL_LANG']['tl_columnset']['show'][1] = 'Spatenset ID %s anzeigen';
+$GLOBALS['TL_LANG']['tl_columnset']['show'][0] = 'Spaltenset anzeigen';
+$GLOBALS['TL_LANG']['tl_columnset']['show'][1] = 'Spaltenset ID %s anzeigen';
